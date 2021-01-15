@@ -7,15 +7,22 @@ return [
 
     'scheme' => "CREATE TABLE IF NOT EXISTS `users` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
-        `first_name` varchar(80) NOT NULL,
-        `insertion` varchar(20),
+
+        `first_name` varchar(30) NOT NULL,
+        `middle_name` varchar(80),
         `last_name` varchar(80) NOT NULL,
+        `full_name` varchar(70) NOT NULL,
+
         `email` varchar(255) NOT NULL,
         `password` varchar(255) NOT NULL,
+
         `role`int(11) NOT NULL,
+
         `country` int(11),
         `city` varchar(255),
         `birthday` date,
+
+        `comment` varchar(255),
         `created` timestamp,
         `updated` timestamp DEFAULT CURRENT_TIMESTAMP,
         `deleted` timestamp,
